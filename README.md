@@ -26,6 +26,14 @@
 공을 튕겨 몰려오는 몬스터를 부수고 성벽을 지키는 벽돌깨기 + 디펜스 도트 로그라이크.<br>
 A pixel-art roguelike where brick-breaking meets tower defense: bounce balls, smash the horde, hold the wall.
 
+### Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MOUL93/MOUL93/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MOUL93/MOUL93/output/snake-light.svg">
+  <img alt="Contribution graph eaten by a snake" src="https://raw.githubusercontent.com/MOUL93/MOUL93/output/snake-light.svg">
+</picture>
+
 ### Contact
 
 - Site: [moul93.github.io](https://moul93.github.io)
