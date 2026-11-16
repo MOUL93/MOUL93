@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://moul93.github.io">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/moospace-wordmark-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/moospace-wordmark-light.svg">
-      <img alt="moospace" src="assets/moospace-wordmark-light.svg" width="360">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+      <img alt="moospace" src="assets/banner-light.svg" width="100%">
     </picture>
   </a>
 </p>
