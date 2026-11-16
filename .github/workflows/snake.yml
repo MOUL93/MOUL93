@@ -1,0 +1,38 @@
+name: snake
+
+# Draws the contribution graph as a snake (dark and light, brand colours)
+# and pushes the SVGs to the `output` branch, which the README embeds.
+
+on:
+  schedule:
+    - cron: "17 0 * * *" # daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?color_snake=#ff7a5c&color_dots=#1a1d26,#4a2722,#8a3a2b,#c9533a,#ff7a5c
+            dist/snake-light.svg?color_snake=#f26244&color_dots=#efe7e3,#f8c6b8,#f2977f,#e66a4d,#d9452b
+
+      - name: Check the generated files
+        run: |
+          test -f dist/snake-dark.svg
+          test -f dist/snake-light.svg
+
+      - name: Push to the output branch
+        uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
